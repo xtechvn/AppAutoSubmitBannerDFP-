@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AppAutoSubmitBannerDFP.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppAutoSubmitBannerDFP_RefSendMailV2_ServiceMail" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://email.polyad.net/ServiceMail.asmx</Value>
+    </Setting>
+    <Setting Name="AppAutoSubmitBannerDFP_RefUploadFile_Upload" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://st-cs.fptonline.net/upload.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

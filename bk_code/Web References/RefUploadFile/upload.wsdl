@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="iPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxW" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxH" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="iPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxW" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxH" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFileV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iData" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="iPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxW" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxH" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFileNewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFilePDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFilePDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFilePDFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApiSaveXmlAfterSendToVans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sXml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApiSaveXmlAfterSendToVansResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ApiSaveXmlAfterSendToVansResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFile" />
+  </wsdl:message>
+  <wsdl:message name="SendFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFileV2SoapIn">
+    <wsdl:part name="parameters" element="tns:SendFileV2" />
+  </wsdl:message>
+  <wsdl:message name="SendFileV2SoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileV2Response" />
+  </wsdl:message>
+  <wsdl:message name="SendFileNewSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFileNew" />
+  </wsdl:message>
+  <wsdl:message name="SendFileNewSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFilePDFSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFilePDF" />
+  </wsdl:message>
+  <wsdl:message name="SendFilePDFSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFilePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApiSaveXmlAfterSendToVansSoapIn">
+    <wsdl:part name="parameters" element="tns:ApiSaveXmlAfterSendToVans" />
+  </wsdl:message>
+  <wsdl:message name="ApiSaveXmlAfterSendToVansSoapOut">
+    <wsdl:part name="parameters" element="tns:ApiSaveXmlAfterSendToVansResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UploadSoap">
+    <wsdl:operation name="SendFile">
+      <wsdl:input message="tns:SendFileSoapIn" />
+      <wsdl:output message="tns:SendFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFileV2">
+      <wsdl:input message="tns:SendFileV2SoapIn" />
+      <wsdl:output message="tns:SendFileV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFileNew">
+      <wsdl:input message="tns:SendFileNewSoapIn" />
+      <wsdl:output message="tns:SendFileNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFilePDF">
+      <wsdl:input message="tns:SendFilePDFSoapIn" />
+      <wsdl:output message="tns:SendFilePDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApiSaveXmlAfterSendToVans">
+      <wsdl:input message="tns:ApiSaveXmlAfterSendToVansSoapIn" />
+      <wsdl:output message="tns:ApiSaveXmlAfterSendToVansSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UploadSoap" type="tns:UploadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFile">
+      <soap:operation soapAction="http://tempuri.org/SendFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFileV2">
+      <soap:operation soapAction="http://tempuri.org/SendFileV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFileNew">
+      <soap:operation soapAction="http://tempuri.org/SendFileNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFilePDF">
+      <soap:operation soapAction="http://tempuri.org/SendFilePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiSaveXmlAfterSendToVans">
+      <soap:operation soapAction="http://tempuri.org/ApiSaveXmlAfterSendToVans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UploadSoap12" type="tns:UploadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendFile">
+      <soap12:operation soapAction="http://tempuri.org/SendFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFileV2">
+      <soap12:operation soapAction="http://tempuri.org/SendFileV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFileNew">
+      <soap12:operation soapAction="http://tempuri.org/SendFileNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFilePDF">
+      <soap12:operation soapAction="http://tempuri.org/SendFilePDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApiSaveXmlAfterSendToVans">
+      <soap12:operation soapAction="http://tempuri.org/ApiSaveXmlAfterSendToVans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Upload">
+    <wsdl:port name="UploadSoap" binding="tns:UploadSoap">
+      <soap:address location="https://st-cs.fptonline.net/upload.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UploadSoap12" binding="tns:UploadSoap12">
+      <soap12:address location="https://st-cs.fptonline.net/upload.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
